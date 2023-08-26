@@ -41,6 +41,12 @@
     justify-content: left;
     align-items: self-end;
   }
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
   
   #logo,
   #contacto {
@@ -85,6 +91,11 @@
     background-color: #262626;
     border-radius: 8px;
   }
+  #topJuegos > img{
+    display: flex;
+    background-color: #62acf7;
+
+  }
   
   section {
     scroll-margin-top:  90px;
@@ -103,6 +114,7 @@
     border-bottom: 5px solid #62acf7;
     margin-bottom: 2rem;
   }
+  
   
   #home {
     display: flex;
