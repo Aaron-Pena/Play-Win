@@ -1,23 +1,13 @@
 
-console.log('Hola mundo!');
-
-
-/*function mostrarMensajeInicial() {
-
-  if (confirm('Este sitio esta en desarrollo, disculpe las molestias')) {
-    alert('Gracias por visitarnos!');
-  } else {
-    alert('...');
-  }
-}*/
-function goHome(){
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
+function goHome() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+
   const scrollToBottomButtom = document.getElementById('btn-ir-arriba');
 
   window.addEventListener("scroll", () => {
@@ -26,12 +16,30 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       scrollToBottomButtom.style.display = 'none';
     }
-  })
+  });
 
   scrollToBottomButtom.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    })
-  })
-})
+    });
+  });
+
+
+  const contactoForm = document.getElementById('contacto-form');
+
+  contactoForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    alert('Gracias por contactarnos - Nombre: ' + nombre + '- Email: ' + email + '- Mensaje: ' + mensaje);
+
+    contactoForm.reset();
+  });
+});
+
+
+
+

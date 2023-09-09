@@ -1,367 +1,621 @@
-/* DEFINIMOS TEMPORALEMNTE PALETA DE COLORES, QUITAR ESTA SECCION AL FINAL */
-#PALETA_DE_COLORES {
-    color: #F3EFE0 #22A39F #222222 #434242 #5C8374 #383b4f;
-  }
-  
-  
-  
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+ :root {
+   --size-header: 90px;
 
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-  
-    background-color: #424a52;
-    color: #000000;
-  }
-  
-  /* #region HEADER */
-  header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  
-    background: #383b4f;
-  
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    box-shadow: 0 6px 8px rgba(0,0,0, 0.10);
-    z-index: 1;
-  }
-  header > h4{
-    color: whitesmoke;
-    font-size: large;
-    flex-direction: row;
-    justify-content: left;
-    align-items: self-end;
-  }
-  .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-  
-  #logo,
-  #contacto {
-    display: flex;
-    height: 55px;
-    width: 55px;
-    margin: 10px;
-  }
-  
-  #logo,
-  #contacto > img {
-    width: auto;
-    padding: 5px;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-    height: 55px;
-    font-size: 1.25rem;
-  }
-  
-  nav ul {
-    list-style: none;
-  
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  nav li {
-    padding: 1rem 2rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #62acf7;
-    font-weight: 600;
-  }
-  
-  nav li:hover,
-  #contacto:hover {
-    background-color: #262626;
-    border-radius: 8px;
-  }
-  #topJuegos > img{
-    display: flex;
-    background-color: #62acf7;
-
-  }
-  /* #endregion */
-  
-  /* #region SECTION */
-  section {
-    scroll-margin-top:  90px;
-    padding: 45px 90px;
-  
-    /* tmp: para visualizar secciones */
-    height: 100vh;
-    border: 0.8px double #ffffff;
-  }
-  
-  section > h1 {
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: #62acf7;
-  
-    border-bottom: 5px solid #62acf7;
-    margin-bottom: 2rem;
-  }
-  section > h3{
-
-    font-size: 1.5rem;
-    color: #0c2238;
-
-    margin-bottom: 0.9rem;
-    background-color: #529eeabb;
-    border-radius: 8px;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* #endregion */
-  
-  /* #region HOME */
-  #home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-    background: url("../img/ac6.jpg") no-repeat center center;
-    background-size: cover;
-  
-    color: white;
-    
-    height: 100vh;
-  }
-  
-  .home-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  
-    background-color: #34495e;
-    opacity: 0.9;
-    padding: 3rem;
-    border-radius: 8px;
-    
-  }
-  /* #endregion */
-
-  /* #region DESTACADOS */
-  
-  .destacados-container{
-    display: flex;
-    
-    gap: 10px;
-    padding: 15px;
-    background-color: hsl(249, 33%, 56%);
-    border-radius: 8px;
-  }
-  .destacados-descripcion{
-    flex-direction: row;
-    padding: 7px;
-    background-color: hsla(240, 10%, 69%, 0.592);
-    border-radius: 8px;
-  }
-
-  /* #endregion */
-
-  /* #region REVIEWS */
-  .clientes-reviews {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .comentario {
-    display: flex;
-    gap: 10px;
-    padding: 15px;
-    background-color: hsl(253, 35%, 50%);
-    border-radius: 8px;
-  }
-
-  .cliente-mensaje {
-    flex: 1;
-    margin-bottom: 0.75rem;
-  }
-  
-  .cliente-nombre {
-    font-style: italic;
-    font-weight: 600;
-  }
-  .juego{
-    font-style: bold;
-    font-weight: 700;
-    background-color: #7e8c9b;
-    border-radius: 8px;
-  }
-  /* #endregion */
+   --color-primario: #383b4f;
+   --color-fondo: #424a52;
+   --color-fondo2: #000000;
+   --color-fondo3: #262626;
+   --color-blanco: #f5f5f5;
+   --color-borde: #ffffff5e;
+   --color-letras: #64adf7;
+   --color-fondo4: #529eeabb;
+   --color-fondo5: #34495e;
+   --color-container1: #756ab4;
+   --color-container2: #a8a8b897;
+   --color-comentarios: #6653ac;
+   --color-reseñasBG: #7e8c9b;
+   --color-ReseñasCard: #5d89b4;
+   --color-Card: #b6b3b323;
+   --color-xboxColor: #42cc02;
+   --color-footer: #153d58;
+   --color-azul: #62acf7;
+ }
 
 
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: 0;
+ }
 
-/* #region TOP */
-  .topJuegos-container {
-    display: flex;
-  }
-  
-  .card {
-    position: relative;
-    padding: 20px;
-    margin: 20px;
-    background: #5d89b4;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    text-align: center;
-    overflow: hidden;
-    
-  }
-  
-  .card img {
-    width: 200px;
-    border-radius: 8px;
-  }
-  
-  .card h3 {
-    margin-bottom:  10px;
-    font-size: 1.5rem;
-    text-decoration: underline ;
-  }
-  
-  .card p {
-    margin-bottom: 10px;
-    color:#000000;
-    font-size: 16px;
-    background-color: rgba(182, 179, 179, 0.137);
-    border-radius: 8px;
-    margin-top: 3px;
-    margin-bottom: 20px;
-    
-  }
+ html {
+   scroll-behavior: smooth;
+ }
 
-  button.btn,
-  a.button-link {
-    cursor: pointer;
-  
-    background-color: #34495e;
-    color: #ffffff;
-    font-size: 1.25rem;
-  
-    width: 100%;
-    height: 42px;
-    padding: 0 2rem;
-  
-    border: none;
-  
-    border-radius: 21px;
-    transition: color 0.5s;
-  }
-  
-  a.button-link {
-    display: inline;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  button.btn:hover,
-  a.button-link:hover {
-    background-color: #222250;
-  }
+ body {
+   font-family: 'Inter', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
 
-/* #endregion */
+   background-color: var(--color-fondo);
+   color: var(--color-fondo2);
+ }
 
-/* #region PROXIMOS */
+ /* #region GENERAL*/
+ .fx-column {
+   display: flex;
+   flex-direction: column;
+ }
 
-  .proximos-container{
-    display: flex;
-  justify-content: center;
-  flex-flow: wrap;
- 
-  background-color: #153d58;
-  border-radius: 8px;
-  
-  }
-  .proximos-wrap{
+ .fx-row {
+   display: flex;
+   flex-direction: row;
+ }
 
-  }
-  .proximos-wrap p{
-    justify-content: center;
-    font-size: 20px;
-    color: whitesmoke;
-    padding: 1rem;
+ .fx-content-space-between {
+   justify-content: space-between;
+ }
 
-  }
- 
-  .proximos-img{
-    max-width: 300px;
-    padding: 0.75rem;
-    margin: 0.15rem;
-    cursor: pointer;
-    object-fit: cover;
-    background-color: #42cc02;
-    border-radius: 8px;
-  }
+ .fx-content-center {
+   justify-content: center;
+ }
+
+ .fx-align-items-center {
+   align-items: center;
+ }
+
+ /* #endregion */
+
+ /* #region HEADER */
+ header {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   background: var(--color-primario);
+   position: fixed;
+   width: 100%;
+   height: 90px;
+   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.10);
+   z-index: 1;
+ }
+
+ header>h4 {
+   color: var(--color-blanco);
+   font-size: large;
+   flex-direction: row;
+   justify-content: left;
+   align-items: self-end;
+ }
+
+ .center {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+ }
+
+ #logo,
+ #contacto {
+   display: flex;
+   height: 55px;
+   width: 55px;
+   margin: 10px;
+ }
+
+ #logo,
+ #contacto>img {
+   width: auto;
+   padding: 5px;
+ }
+
+ nav {
+   display: flex;
+   align-items: center;
+   height: 55px;
+   font-size: 1.25rem;
+ }
+
+ nav ul {
+   list-style: none;
+
+   display: flex;
+   justify-content: space-between;
+ }
+
+ nav li {
+   padding: 1rem 2rem;
+ }
+
+ nav a {
+   text-decoration: none;
+   color: var(--color-azul);
+   font-weight: 600;
+ }
+
+ nav li:hover,
+ #contacto:hover {
+   background-color: var(--color-fondo3);
+   border-radius: 8px;
+ }
+
+ #topJuegos>img {
+   display: flex;
+   background-color: var(--color-azul);
+ }
+
+ /* #endregion */
+
+ /* #region SECTION */
+ section {
+   scroll-margin-top: 90px;
+   padding: calc(var(--size-header) / 2) var(--size-header);
+   border: 0.8px double var(--color-borde);
+ }
+
+ section>h1 {
+   text-transform: uppercase;
+   font-size: 2rem;
+   color: var(--color-azul);
+   border-bottom: 5px solid var(--color-azul);
+   margin-bottom: 2rem;
+ }
+
+ section>h3 {
+   font-size: 1.5rem;
+   color: #0c2238;
+
+   margin-bottom: 0.9rem;
+   background-color: var(--color-fondo4);
+   border-radius: 8px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+ /* #endregion */
+
+ /* #region HOME */
+ #home {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   background: url("../img/ac6.jpg") no-repeat center center;
+   background-size: cover;
+
+   color: var(--color-blanco);
+
+   height: 100vh;
+ }
+
+ .home-banner {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1rem;
+
+   background-color: var(--color-fondo5);
+   opacity: 0.9;
+   padding: 3rem;
+   border-radius: 8px;
+
+ }
+
+ /* #endregion */
+
+ /* #region DESTACADOS */
+
+ .destacados-container {
+   display: flex;
+
+   gap: 10px;
+   padding: 15px;
+   background-color: var(--color-container1);
+   border-radius: 8px;
+ }
+
+ .destacados-descripcion {
+   flex-direction: row;
+   padding: 7px;
+   background-color: var(--color-container2);
+   border-radius: 8px;
+ }
+
+ /* #endregion */
+
+ /* #region REVIEWS */
+ .clientes-reviews {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+
+ .comentario {
+   display: flex;
+   gap: 10px;
+   padding: 15px;
+   background-color: var(--color-comentarios);
+   border-radius: 8px;
+ }
+
+ .cliente-mensaje {
+   flex: 1;
+   margin-bottom: 0.75rem;
+ }
+
+ .cliente-nombre {
+   font-style: italic;
+   font-weight: 600;
+ }
+
+ .juego {
+   font-style: bold;
+   font-weight: 700;
+   background-color: var(--color-reseñasBG);
+   border-radius: 8px;
+ }
+
+ /* #endregion */
 
 
-  /* #endregion */
 
-  footer {
-    background: #153d58;
-    height: 50vh;
-  }
-  
-  #btn-ir-arriba {
-    display: none;
-    cursor: pointer;
-  
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  
-    background: hsl(210, 29%, 29%);
-    color: white;
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
-    border: none;
-  
-    box-shadow: 0px 12px 7px rgba(0, 0, 0, .1);
-    transition: 300ms ease;
-  }
-  
-  #btn-ir-arriba:hover {
-    background: hsl(210, 29%, 24%);
-    transform: translateY(-0.5rem);
-  }
-  
-  #btn-ir-arriba svg {
-    width: 25px;
-    fill: none;
-    stroke: white;
-    stroke-width: 3px;
-  }
-  
+ /* #region TOP */
+ .topJuegos-container {
+   display: flex;
+ }
+
+ .card {
+   position: relative;
+   padding: 20px;
+   margin: 20px;
+   background: var(--color-ReseñasCard);
+   box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+   border-radius: 15px;
+   text-align: center;
+   overflow: hidden;
+
+ }
+
+ .card img {
+   width: 200px;
+   border-radius: 8px;
+ }
+
+ .card h3 {
+   margin-bottom: 10px;
+   font-size: 1.5rem;
+   text-decoration: underline;
+ }
+
+ .card p {
+   margin-bottom: 10px;
+   color: var(--color-fondo2);
+   font-size: 16px;
+   background-color: var(--color-Card);
+   border-radius: 8px;
+   margin-top: 3px;
+   margin-bottom: 20px;
+
+ }
+
+ button.btn,
+ a.button-link {
+   cursor: pointer;
+   background-color: var(--color-fondo5);
+   color: var(--color-blanco);
+   font-size: 1.25rem;
+   width: 100%;
+   height: 42px;
+   padding: 0 2rem;
+   border: none;
+   border-radius: 21px;
+   transition: color 0.5s;
+ }
+
+ a.button-link {
+   display: inline;
+   padding: 10px 20px;
+   text-decoration: none;
+   text-align: center;
+ }
+
+ button.btn:hover,
+ a.button-link:hover {
+   background-color: #222250;
+ }
+
+ /* #endregion */
+
+ /* #region PROXIMOS */
+
+ .proximos-container {
+   display: flex;
+   justify-content: center;
+   flex-flow: wrap;
+
+   background-color: var(--color-footer);
+   border-radius: 8px;
+
+ }
+
+ .proximos-wrap p {
+   justify-content: center;
+   font-size: 20px;
+   color: var(--color-blanco);
+   padding: 1rem;
+ }
+
+ .proximos-img {
+   max-width: 300px;
+   padding: 0.75rem;
+   margin: 0.15rem;
+   cursor: pointer;
+   object-fit: cover;
+   background-color: var(--color-xboxColor);
+   border-radius: 8px;
+ }
+
+
+ /* #endregion */
+
+
+ /* #region FOOTER */
+ .footer-center {
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+ }
+
+ footer {
+   background: var(--color-footer);
+   height: 60vh;
+   text-align: center;
+   color: var(--color-azul);
+   padding: 6rem 3rem;
+ }
+
+ .contacto-container {
+   width: 600px;
+   max-width: 100%;
+
+ }
+
+ .contacto-container h2 {
+   font-size: 2rem;
+   margin-bottom: 2rem;
+   text-transform: uppercase;
+
+ }
+
+ input,
+ textarea {
+   margin-bottom: 1rem;
+   padding: 8px;
+   border: 1px solid #F3EFE0;
+   border-radius: 3px;
+ }
+
+ /* #endregion */
+
+ /* #region Redes-Sociales*/
+
+ .redes-sociales-container {
+   gap: 1.5rem;
+   padding: 3rem 2rem;
+ }
+
+ .fa-brands {
+   font-size: 2rem;
+   color: var(--color-azul);
+ }
+
+ .fa-brands:hover {
+   color: #222250;
+ }
+
+ .fa-brands:active {
+   color: #22A39F;
+ }
+
+ /* #endregion */
+
+
+
+ /* #region BTN_Arriba */
+
+ #btn-ir-arriba {
+   display: none;
+   cursor: pointer;
+
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+
+   background: hsl(210, 29%, 29%);
+   color: white;
+   height: 50px;
+   width: 50px;
+   border-radius: 25px;
+   border: none;
+
+   box-shadow: 0px 12px 7px rgba(0, 0, 0, .1);
+   transition: 300ms ease;
+ }
+
+ #btn-ir-arriba:hover {
+   background: hsl(210, 29%, 24%);
+   transform: translateY(-0.5rem);
+ }
+
+ #btn-ir-arriba svg {
+   width: 25px;
+   fill: none;
+   stroke: white;
+   stroke-width: 3px;
+ }
+
+ /* #endregion */
+
+
+ /* #region Responsive */
+ @media screen and (max-width: 1440px) {
+
+   body {
+     font-size: 14px;
+   }
+
+   section {
+     padding: 40px 70px;
+     scale: 100%;
+   }
+
+   section h3 {
+     font-size: large;
+     padding: 10px;
+   }
+
+   .destacados-container {
+     padding: 15px;
+     gap: 15px;
+     font-size: medium;
+     display: flex;
+     flex-direction: column;
+   }
+
+   .topJuegos-container {
+     display: flex;
+     flex-direction: column;
+
+   }
+
+   .card {
+     padding: 40px 70px;
+   }
+
+   .clientes-reviews {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .comentario {
+     font-size: medium;
+     display: flex;
+     flex-direction: column;
+   }
+
+   .galeria-img {
+     max-width: 350px;
+     padding: 1rem;
+     margin: 1rem;
+   }
+
+ }
+
+ @media screen and (max-width: 1024px) {
+
+   body {
+     font-size: 13px;
+   }
+
+   section {
+     padding: 40px 50px;
+   }
+
+   section>h1 {
+     font-size: 1.5rem;
+   }
+
+   section h3 {
+     font-size: large;
+     padding: 10px;
+   }
+
+   nav {
+     font-size: 1.125rem;
+   }
+
+   .destacados-container {
+     padding: 15px;
+     gap: 20px;
+     font-size: medium;
+     display: flex;
+     flex-direction: column;
+   }
+
+   .topJuegos-container {
+     display: flex;
+     flex-direction: column;
+
+   }
+
+   .card {
+     padding: 0.9rem;
+     margin: 0.9rem;
+   }
+
+   .clientes-reviews {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .comentario {
+     font-size: medium;
+     display: flex;
+     flex-direction: column;
+   }
+
+   .galeria-img {
+     max-width: 300px;
+     padding: 0.5rem;
+     margin: 0.5rem;
+   }
+ }
+
+
+ @media screen and (max-width: 768px) {
+   body {
+     font-size: 12px;
+   }
+
+   section {
+     padding: 40px 45px;
+   }
+
+   .xs-hide {
+     display: none;
+   }
+
+   .fx-xs-column {
+     display: flex;
+     flex-direction: column;
+   }
+
+   .card {
+     padding: 40px;
+     margin: 20px 0;
+   }
+
+   .galeria-img {
+     max-width: 100%;
+     padding: 1rem 0;
+     margin: 1rem 0;
+   }
+
+   button.btn,
+   a.button-link {
+     font-size: 1rem;
+   }
+
+ }
+
+ /* #endregion */
